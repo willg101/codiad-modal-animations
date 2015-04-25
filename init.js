@@ -25,7 +25,14 @@
         init: function() {
 
             codiad.modal.onLoadAnimation = function(){
-		$( "#modal" ).slideDown();
+		$( "#modal" ).transit({
+                    scale: 1.15,
+                    opacity: 0,
+                    duration: 0, 
+               }).transit({
+                    scale: 1,
+                    opacity: 1,
+               });
             };
         },
     };
