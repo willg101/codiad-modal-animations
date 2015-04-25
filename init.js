@@ -15,6 +15,8 @@
         codiad.modalAnimations.init();
     });
 
+    $.loadScript( curpath + 'jquery.transit.js' );
+
     codiad.modalAnimations = {
         
         // Allows relative `this.path` linkage
