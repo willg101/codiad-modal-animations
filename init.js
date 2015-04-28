@@ -41,7 +41,7 @@
                      duration: duration,
                      easing: 'easeOutBack'
                 });
-	        event.animationPerformed = false;
+	        event.animationPerformed = true;
             });
             amplify.subscribe('modal.onUnload', function(event){
                 $( "#modal" ).transit({
@@ -51,7 +51,7 @@
                      rotateX: "90deg",
                      duration: duration,
                 });
-                event.animationPerformed = false;
+                event.animationPerformed = true;
             });
         },
     };
