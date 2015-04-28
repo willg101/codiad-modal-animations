@@ -25,7 +25,7 @@
         init: function() {
             var duration = 300;
 
-            amplify.subscribe( 'modal.onLoad', function(){
+            amplify.subscribe('modal.onLoad', function(event){
                 $( "#modal" ).transit({
                      scale: 0,
                      display: 'block',
@@ -41,9 +41,9 @@
                      duration: duration,
                      easing: 'easeOutBack'
                 });
-	        return false;
+	        event.animationPerformed = false;
             });
-            amplify.subscribe( 'modal.onUnload', function(){
+            amplify.subscribe('modal.onUnload', function(event){
                 $( "#modal" ).transit({
                      scale: 0,
                      opacity: 0,
@@ -51,7 +51,7 @@
                      rotateX: "90deg",
                      duration: duration,
                 });
-                return false;
+                event.animationPerformed = false;
             });
         },
     };
